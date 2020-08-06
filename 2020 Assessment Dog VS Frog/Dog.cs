@@ -19,7 +19,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         //Create a constructor (initialises the values of the fields)
         public Dog()
         {
-            x = 10;
+            x = 500;
             y = 360;
             width = 70;
             height = 50;
