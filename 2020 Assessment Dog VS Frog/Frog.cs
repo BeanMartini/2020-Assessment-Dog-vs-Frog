@@ -33,6 +33,13 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             g.DrawImage(frogImage, frogRec);
         }
+        public void MoveFrog()
+        {
+            x += 15;
+
+            frogRec.Location = new Point(x, y);
+        }
+
 
     }
 }

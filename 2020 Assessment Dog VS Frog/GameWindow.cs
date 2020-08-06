@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace _2020_Assessment_Dog_VS_Frog
 {
@@ -20,6 +21,8 @@ namespace _2020_Assessment_Dog_VS_Frog
         public GameWindow()
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
 
             for (int i = 0; i < 7; i++)
             {
@@ -43,6 +46,23 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             frame1.DrawDog(g);
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                frog[i].MoveFrog();
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[i].x >= PnlGame.Width)
+                {
+                    frog[i].x = -20;
+                }
+
+            }
+
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
     }
 }

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.TmrFrog = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PnlGame
@@ -40,6 +42,11 @@
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
+            // TmrFrog
+            // 
+            this.TmrFrog.Enabled = true;
+            this.TmrFrog.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -47,6 +54,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(851, 585);
             this.Controls.Add(this.PnlGame);
+            this.DoubleBuffered = true;
             this.Name = "GameWindow";
             this.Text = "Dog Vs Frog";
             this.ResumeLayout(false);
@@ -56,6 +64,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Timer TmrFrog;
     }
 }
 
