@@ -13,20 +13,33 @@ namespace _2020_Assessment_Dog_VS_Frog
     public partial class GameWindow : Form
     {
         Graphics g; //declare a graphics object called g
-        Frog frog1 = new Frog(); //create the object, frog
+        // declare space for an array of 7 objects called frog 
+        Frog[] frog = new Frog[7];
         Dog frame1 = new Dog();
 
         public GameWindow()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 7; i++)
+            {
+                int y = 10 + (i * 70);
+                frog[i] = new Frog(y);
+            }
+
         }
 
         private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
             //get the graphics used to paint on the panel control
             g = e.Graphics;
-            //call the Frog class's DrawFrog method to draw the image frog1 
-            frog1.DrawFrog(g);
+
+            for (int i = 0; i < 7; i++)
+            {
+                //call the Frog class's drawFrog method to draw the images
+                frog[i].DrawFrog(g);
+            }
+
 
             frame1.DrawDog(g);
 

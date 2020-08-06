@@ -14,12 +14,11 @@ namespace _2020_Assessment_Dog_VS_Frog
         public Image frogImage;//variable for the frog's image
 
         public Rectangle frogRec;//variable for a rectangle to place our image in
-        public int score;
         //Create a constructor (initialises the values of the fields)
-        public Frog()
+        public Frog(int spacing)
         {
             x = 10;
-            y = 10;
+            y = spacing;
             width = 60;
             height = 30;
             //frogImage contains the frog1.gif image
@@ -30,6 +29,8 @@ namespace _2020_Assessment_Dog_VS_Frog
         // Methods for the Frog class
         public void DrawFrog(Graphics g)
         {
+            frogRec = new Rectangle(x, y, width, height);
+
             g.DrawImage(frogImage, frogRec);
         }
 
