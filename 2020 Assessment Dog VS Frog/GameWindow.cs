@@ -21,9 +21,9 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             InitializeComponent();
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                int y = 10 + (i * 70);
+                int y = 10 + (i * 80);
                 frog[i] = new Frog(y);
             }
 
@@ -34,7 +34,7 @@ namespace _2020_Assessment_Dog_VS_Frog
             //get the graphics used to paint on the panel control
             g = e.Graphics;
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 //call the Frog class's drawFrog method to draw the images
                 frog[i].DrawFrog(g);
