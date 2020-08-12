@@ -16,7 +16,17 @@ namespace _2020_Assessment_Dog_VS_Frog
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called frog 
         Frog[] frog = new Frog[7];
+        Random xspeed = new Random();
+        Random xpos = new Random();
         Dog frame1 = new Dog();
+        int rndmspeed;
+        int rndmspeed1;
+        int rndmspeed2;
+        int rndmspeed3;
+        int rndmspeed4;
+        int rndmspeed5;
+        int rndmspeed6;
+        int rndmpos;
 
         public GameWindow()
         {
@@ -39,6 +49,8 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             for (int i = 0; i < 7; i++)
             {
+
+
                 //call the Frog class's drawFrog method to draw the images
                 frog[i].DrawFrog(g);
             }
@@ -52,14 +64,131 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             for (int i = 0; i < 7; i++)
             {
-                frog[i].MoveFrog();
+                frog[0].MoveFrog();
 
-                //if frog reaches right of the Panel, place it back on the left
-                if (frog[i].x >= PnlGame.Width)
+                if (frog[0].x <= -20)
                 {
-                    frog[i].x = -20;
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed = xspeed.Next(1, 10);
                 }
 
+                    frog[0].x += rndmspeed;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[0].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[0].x = rndmpos;
+                }
+
+                frog[1].MoveFrog();
+
+                if (frog[1].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed1 = xspeed.Next(1, 10);
+                }
+
+                frog[1].x += rndmspeed1;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[1].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[1].x = rndmpos;
+                }
+
+                frog[2].MoveFrog();
+
+                if (frog[2].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed2 = xspeed.Next(1, 10);
+                }
+
+                frog[2].x += rndmspeed2;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[2].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[2].x = rndmpos;
+                }
+
+                frog[3].MoveFrog();
+
+                if (frog[3].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed3 = xspeed.Next(1, 10);
+                }
+
+                frog[3].x += rndmspeed3;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[3].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[3].x = rndmpos;
+                }
+
+                frog[4].MoveFrog();
+
+                if (frog[4].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed4 = xspeed.Next(1, 10);
+                }
+
+                frog[4].x += rndmspeed4;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[4].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[4].x = rndmpos;
+                }
+
+                frog[5].MoveFrog();
+
+                if (frog[5].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed5 = xspeed.Next(1, 10);
+                }
+
+                frog[5].x += rndmspeed5;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[5].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[5].x = rndmpos;
+                }
+
+                frog[6].MoveFrog();
+
+                if (frog[6].x <= -20)
+                {
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    rndmspeed6 = xspeed.Next(1, 10);
+                }
+
+                frog[6].x += rndmspeed6;
+
+
+                //if frog reaches right of the Panel, place it back on the left
+                if (frog[6].x > PnlGame.Width)
+                {
+                    rndmpos = xpos.Next(-800, -20);
+                    frog[6].x = rndmpos;
+                }
             }
 
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel

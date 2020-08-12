@@ -15,9 +15,12 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         public Rectangle frogRec;//variable for a rectangle to place our image in
         //Create a constructor (initialises the values of the fields)
+
+        
+
         public Frog(int spacing)
         {
-            x = 10;
+            x= -20;
             y = spacing;
             width = 60;
             height = 30;
@@ -35,8 +38,6 @@ namespace _2020_Assessment_Dog_VS_Frog
         }
         public void MoveFrog()
         {
-            x += 15;
-
             frogRec.Location = new Point(x, y);
         }
 

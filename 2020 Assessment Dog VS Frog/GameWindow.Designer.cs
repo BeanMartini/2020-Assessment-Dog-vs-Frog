@@ -45,6 +45,7 @@
             // TmrFrog
             // 
             this.TmrFrog.Enabled = true;
+            this.TmrFrog.Interval = 120;
             this.TmrFrog.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // GameWindow
