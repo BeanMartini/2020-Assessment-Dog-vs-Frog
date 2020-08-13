@@ -36,7 +36,7 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             for (int i = 0; i < 7; i++)
             {
-                int y = 10 + (i * 70);
+                int y = 10 + (i * 130);
                 frog[i] = new Frog(y);
             }
 
@@ -49,8 +49,6 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             for (int i = 0; i < 7; i++)
             {
-
-
                 //call the Frog class's drawFrog method to draw the images
                 frog[i].DrawFrog(g);
             }
@@ -69,7 +67,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[0].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed = xspeed.Next(1, 10);
+                    rndmspeed = xspeed.Next(1, 12);
                 }
 
                     frog[0].x += rndmspeed;
@@ -87,7 +85,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[1].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed1 = xspeed.Next(1, 10);
+                    rndmspeed1 = xspeed.Next(1, 12);
                 }
 
                 frog[1].x += rndmspeed1;
@@ -105,7 +103,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[2].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed2 = xspeed.Next(1, 10);
+                    rndmspeed2 = xspeed.Next(1, 12);
                 }
 
                 frog[2].x += rndmspeed2;
@@ -123,7 +121,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[3].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed3 = xspeed.Next(1, 10);
+                    rndmspeed3 = xspeed.Next(1, 12);
                 }
 
                 frog[3].x += rndmspeed3;
@@ -141,7 +139,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[4].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed4 = xspeed.Next(1, 10);
+                    rndmspeed4 = xspeed.Next(1, 12);
                 }
 
                 frog[4].x += rndmspeed4;
@@ -159,7 +157,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[5].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed5 = xspeed.Next(1, 10);
+                    rndmspeed5 = xspeed.Next(1, 12);
                 }
 
                 frog[5].x += rndmspeed5;
@@ -177,7 +175,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 if (frog[6].x <= -20)
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    rndmspeed6 = xspeed.Next(1, 10);
+                    rndmspeed6 = xspeed.Next(1, 12);
                 }
 
                 frog[6].x += rndmspeed6;

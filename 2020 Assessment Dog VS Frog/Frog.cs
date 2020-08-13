@@ -22,8 +22,8 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             x= -20;
             y = spacing;
-            width = 60;
-            height = 30;
+            width = 120;
+            height = 60;
             //frogImage contains the frog1.gif image
             frogImage = Properties.Resources.frog1;
             frogRec = new Rectangle(x, y, width, height);

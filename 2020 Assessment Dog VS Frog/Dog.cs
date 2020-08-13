@@ -19,10 +19,10 @@ namespace _2020_Assessment_Dog_VS_Frog
         //Create a constructor (initialises the values of the fields)
         public Dog()
         {
-            x = 500;
+            x = 1700;
             y = 360;
-            width = 70;
-            height = 50;
+            width = 140;
+            height = 100;
             dog = Properties.Resources.frame1;
             dogRec = new Rectangle(x, y, width, height);
         }
