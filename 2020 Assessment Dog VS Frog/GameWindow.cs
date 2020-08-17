@@ -191,5 +191,15 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
+
+        private void PnlGame_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            frame1.moveDog(e.X, e.Y);
+        }
+
+        private void TmrDog_Tick(object sender, EventArgs e)
+        {
+            Invalidate();
+        }
     }
 }

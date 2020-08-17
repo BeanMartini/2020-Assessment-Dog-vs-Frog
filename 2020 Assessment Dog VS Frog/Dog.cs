@@ -34,5 +34,12 @@ namespace _2020_Assessment_Dog_VS_Frog
             g.DrawImage(dog, dogRec);
         }
 
+        public void moveDog(int mouseX, int mouseY)
+        {
+            dogRec.X = mouseX;
+            dogRec.Y = mouseY;
+
+        }
+
     }
 }
