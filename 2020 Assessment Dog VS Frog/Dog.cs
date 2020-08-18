@@ -38,7 +38,6 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             dogRec.X = mouseX;
             dogRec.Y = mouseY;
-
         }
 
     }
