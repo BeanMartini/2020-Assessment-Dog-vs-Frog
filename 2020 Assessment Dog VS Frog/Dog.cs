@@ -104,11 +104,5 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         }
 
-        public void moveDog(int mouseX, int mouseY)
-        {
-            dogRec.X = mouseX;
-            dogRec.Y = mouseY;
-        }
-
     }
 }

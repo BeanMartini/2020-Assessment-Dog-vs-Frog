@@ -46,7 +46,8 @@ namespace _2020_Assessment_Dog_VS_Frog
             if (e.KeyData == Keys.Down) { down = false; }
         }
 
-        private void timer1_Tick_1(object sender, EventArgs e)
+
+        private void TmrDog_Tick_1(object sender, EventArgs e)
         {
             if (right) // if right arrow key pressed
             {
@@ -68,7 +69,6 @@ namespace _2020_Assessment_Dog_VS_Frog
                 move = "down";
                 frame1.MoveDog(move);
             }
-
         }
 
         public GameWindow()
@@ -234,14 +234,5 @@ namespace _2020_Assessment_Dog_VS_Frog
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 
-        private void PnlGame_MouseMove_1(object sender, MouseEventArgs e)
-        {
-            frame1.moveDog(e.X, e.Y);
-        }
-
-        private void TmrDog_Tick(object sender, EventArgs e)
-        {
-            Invalidate();
-        }
     }
 }

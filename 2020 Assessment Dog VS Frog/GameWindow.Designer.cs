@@ -49,7 +49,6 @@
             this.PnlGame.Size = new System.Drawing.Size(1897, 864);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
-            this.PnlGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseMove_1);
             // 
             // TmrFrog
             // 
@@ -125,6 +124,7 @@
             // TmrDog
             // 
             this.TmrDog.Enabled = true;
+            this.TmrDog.Tick += new System.EventHandler(this.TmrDog_Tick_1);
             // 
             // GameWindow
             // 
