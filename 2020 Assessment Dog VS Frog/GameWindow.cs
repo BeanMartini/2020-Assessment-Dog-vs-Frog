@@ -231,6 +231,55 @@ namespace _2020_Assessment_Dog_VS_Frog
                     frog[6].x = rndmpos;
                 }
             }
+
+            if (frame1.dogRec.IntersectsWith(frog[0].frogRec))
+            {
+                //reset frog[0] back to left of panel
+                frog[0].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[1].frogRec))
+            {
+                //reset frog[1] back to left of panel
+                frog[1].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[2].frogRec))
+            {
+                //reset frog[2] back to left of panel
+                frog[2].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[3].frogRec))
+            {
+                //reset frog[3] back to left of panel
+                frog[3].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[4].frogRec))
+            {
+                //reset frog[4] back to left of panel
+                frog[4].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[4].frogRec))
+            {
+                //reset frog[4] back to left of panel
+                frog[4].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[5].frogRec))
+            {
+                //reset frog[5] back to left of panel
+                frog[5].x = -200; // set x value of frogRec
+            }
+
+            if (frame1.dogRec.IntersectsWith(frog[6].frogRec))
+            {
+                //reset frog[6] back to left of panel
+                frog[6].x = -200; // set x value of frogRec
+            }
+
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
 

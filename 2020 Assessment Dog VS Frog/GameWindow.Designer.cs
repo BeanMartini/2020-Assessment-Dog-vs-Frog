@@ -124,6 +124,7 @@
             // TmrDog
             // 
             this.TmrDog.Enabled = true;
+            this.TmrDog.Interval = 50;
             this.TmrDog.Tick += new System.EventHandler(this.TmrDog_Tick_1);
             // 
             // GameWindow
