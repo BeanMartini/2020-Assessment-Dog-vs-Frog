@@ -125,7 +125,6 @@
             // TmrDog
             // 
             this.TmrDog.Enabled = true;
-            this.TmrDog.Tick += new System.EventHandler(this.TmrDog_Tick);
             // 
             // GameWindow
             // 
@@ -141,8 +140,11 @@
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.PnlGame);
             this.DoubleBuffered = true;
+            this.KeyPreview = true;
             this.Name = "GameWindow";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

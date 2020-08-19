@@ -33,6 +33,76 @@ namespace _2020_Assessment_Dog_VS_Frog
 
             g.DrawImage(dog, dogRec);
         }
+        public void MoveDog(string move)
+        {
+            dogRec.Location = new Point(x, y);
+
+            if (move == "right")
+            {
+                if (dogRec.Location.X >= 1750) // is spaceship within 50 of right side
+                {
+
+                    x = 1750;
+                    dogRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 15;
+                    dogRec.Location = new Point(x, y);
+                }
+
+            }
+
+            if (move == "left")
+            {
+                if (dogRec.Location.X < 0) // is spaceship within 10 of left side
+                {
+
+                    x = 0;
+                    dogRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x -= 15;
+                    dogRec.Location = new Point(x, y);
+                }
+
+            }
+
+
+            if (move == "up")
+            {
+                if (dogRec.Location.Y <= 0) // is spaceship within 50 of right side
+                {
+
+                    y = 0;
+                    dogRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y -= 15;
+                    dogRec.Location = new Point(x, y);
+                }
+
+            }
+
+            if (move == "down")
+            {
+                if (dogRec.Location.Y >= 760) // is spaceship within 10 of left side
+                {
+
+                    y = 760;
+                    dogRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y += 15;
+                    dogRec.Location = new Point(x, y);
+                }
+
+            }
+
+        }
 
         public void moveDog(int mouseX, int mouseY)
         {

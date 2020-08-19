@@ -27,6 +27,49 @@ namespace _2020_Assessment_Dog_VS_Frog
         int rndmspeed5;
         int rndmspeed6;
         int rndmpos;
+        bool left, right, up, down;
+        string move;
+
+        private void GameWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = true; }
+            if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyData == Keys.Up) { up = true; }
+            if (e.KeyData == Keys.Down) { down = true; }
+        }
+
+        private void GameWindow_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = false; }
+            if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyData == Keys.Up) { up = false; }
+            if (e.KeyData == Keys.Down) { down = false; }
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            if (right) // if right arrow key pressed
+            {
+                move = "right";
+                frame1.MoveDog(move);
+            }
+            if (left) // if left arrow key pressed
+            {
+                move = "left";
+                frame1.MoveDog(move);
+            }
+            if (up) // if up arrow key pressed
+            {
+                move = "up";
+                frame1.MoveDog(move);
+            }
+            if (down) // if down arrow key pressed
+            {
+                move = "down";
+                frame1.MoveDog(move);
+            }
+
+        }
 
         public GameWindow()
         {
