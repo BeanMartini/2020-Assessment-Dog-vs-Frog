@@ -37,6 +37,7 @@
             this.txtScore = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.Label();
+            this.TmrDog = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PnlGame
@@ -48,6 +49,7 @@
             this.PnlGame.Size = new System.Drawing.Size(1897, 864);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            this.PnlGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlGame_MouseMove);
             // 
             // TmrFrog
             // 
@@ -120,6 +122,12 @@
             this.txtName.TabIndex = 6;
             this.txtName.Text = "NUL";
             // 
+            // TmrDog
+            // 
+            this.TmrDog.Enabled = true;
+            this.TmrDog.Interval = 50;
+            this.TmrDog.Tick += new System.EventHandler(this.TmrDog_Tick);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +159,7 @@
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label txtName;
+        private System.Windows.Forms.Timer TmrDog;
     }
 }
 
