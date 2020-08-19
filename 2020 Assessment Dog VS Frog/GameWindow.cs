@@ -188,7 +188,6 @@ namespace _2020_Assessment_Dog_VS_Frog
                     frog[6].x = rndmpos;
                 }
             }
-
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
     }
