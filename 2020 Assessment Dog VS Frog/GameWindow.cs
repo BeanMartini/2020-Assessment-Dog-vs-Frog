@@ -29,8 +29,21 @@ namespace _2020_Assessment_Dog_VS_Frog
         int rndmpos;
         bool left, right, up, down;
         string move;
+        int lives;
 
-        private void GameWindow_KeyDown(object sender, KeyEventArgs e)
+        private void CheckLives()
+        {
+            if (lives == 0)
+            {
+                TmrDog.Enabled = false;
+                TmrFrog.Enabled = false;
+                TmrTime.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+
+        }
+            private void GameWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
@@ -69,6 +82,42 @@ namespace _2020_Assessment_Dog_VS_Frog
                 move = "down";
                 frame1.MoveDog(move);
             }
+        }
+
+        private void tmrTime_Tick(object sender, EventArgs e)
+        {
+            TimeSpan elapsed = DateTime.Now - StartTime;
+
+            // Start with the days if greater than 0.
+            string text = "";
+            if (elapsed.Days > 0)
+                text += elapsed.Days.ToString() + ".";
+
+            // Convert milliseconds into tenths of seconds.
+            int tenths = elapsed.Milliseconds / 100;
+
+            // Compose the rest of the elapsed time.
+            text +=
+                elapsed.Minutes.ToString("00") + ":" +
+                elapsed.Seconds.ToString("00") + "." +
+                tenths.ToString("0");
+
+            lblElapsed.Text = text;
+        }
+        // Start or stop the stopwatch.
+        private DateTime StartTime;
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            TmrTime.Enabled = !TmrTime.Enabled;
+            TmrDog.Enabled = !TmrDog.Enabled;
+            TmrFrog.Enabled = !TmrFrog.Enabled;
+            StartTime = DateTime.Now;
+            btnStart.Enabled = false;
+        }
+
+        private void GameWindow_Load(object sender, EventArgs e)
+        {
+            lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
         }
 
         public GameWindow()
@@ -236,48 +285,72 @@ namespace _2020_Assessment_Dog_VS_Frog
             {
                 //reset frog[0] back to left of panel
                 frog[0].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[1].frogRec))
             {
                 //reset frog[1] back to left of panel
                 frog[1].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[2].frogRec))
             {
                 //reset frog[2] back to left of panel
                 frog[2].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[3].frogRec))
             {
                 //reset frog[3] back to left of panel
                 frog[3].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[4].frogRec))
             {
                 //reset frog[4] back to left of panel
                 frog[4].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[4].frogRec))
             {
                 //reset frog[4] back to left of panel
                 frog[4].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[5].frogRec))
             {
                 //reset frog[5] back to left of panel
                 frog[5].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             if (frame1.dogRec.IntersectsWith(frog[6].frogRec))
             {
                 //reset frog[6] back to left of panel
                 frog[6].x = -200; // set x value of frogRec
+                lives -= 1;// lose a life
+                txtLives.Text = lives.ToString();// display number of lives
+                CheckLives();
             }
 
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel

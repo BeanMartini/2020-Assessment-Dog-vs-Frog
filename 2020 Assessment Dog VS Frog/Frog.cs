@@ -20,7 +20,7 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         public Frog(int spacing)
         {
-            x= -20;
+            x= -200;
             y = spacing;
             width = 120;
             height = 60;
