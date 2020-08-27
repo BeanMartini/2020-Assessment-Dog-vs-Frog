@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frame1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frame1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="frog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frog1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblInstructions.Text" xml:space="preserve">
+    <value>Use the left, right, up and down arrow keys to move your character.
+Try not to get hit by any frogs! If your character gets hit by a frog, a life is lost!
+You must survive as long as possible, try to reach the high score!
+Enter your Name (max 3 characters) and enter a number of lives (1-9).
+Click Start to begin</value>
   </data>
 </root>

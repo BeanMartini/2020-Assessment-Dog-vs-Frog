@@ -30,18 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
-            this.btnStart = new System.Windows.Forms.Button();
             this.TmrFrog = new System.Windows.Forms.Timer(this.components);
             this.lblLives = new System.Windows.Forms.Label();
-            this.txtLives = new System.Windows.Forms.TextBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblElapsed = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.Label();
+            this.lblPlayerName = new System.Windows.Forms.Label();
             this.TmrDog = new System.Windows.Forms.Timer(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TmrTime = new System.Windows.Forms.Timer(this.components);
-            this.PnlGame.SuspendLayout();
+            this.lblPlayerLives = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,25 +47,15 @@
             // 
             this.PnlGame.AutoSize = true;
             this.PnlGame.BackColor = System.Drawing.Color.White;
-            this.PnlGame.Controls.Add(this.btnStart);
             this.PnlGame.Location = new System.Drawing.Point(12, 12);
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(1897, 864);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(207, 61);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
             // TmrFrog
             // 
+            this.TmrFrog.Enabled = true;
             this.TmrFrog.Interval = 120;
             this.TmrFrog.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -81,20 +69,6 @@
             this.lblLives.Size = new System.Drawing.Size(345, 123);
             this.lblLives.TabIndex = 1;
             this.lblLives.Text = "Lives:";
-            // 
-            // txtLives
-            // 
-            this.txtLives.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtLives.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLives.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLives.ForeColor = System.Drawing.Color.White;
-            this.txtLives.Location = new System.Drawing.Point(315, 890);
-            this.txtLives.Name = "txtLives";
-            this.txtLives.ReadOnly = true;
-            this.txtLives.Size = new System.Drawing.Size(100, 124);
-            this.txtLives.TabIndex = 2;
-            this.txtLives.Text = "5";
-            this.txtLives.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTime
             // 
@@ -130,25 +104,37 @@
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Name:";
             // 
-            // txtName
+            // lblPlayerName
             // 
-            this.txtName.AutoSize = true;
-            this.txtName.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(1633, 890);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(302, 123);
-            this.txtName.TabIndex = 6;
-            this.txtName.Text = "NUL";
+            this.lblPlayerName.AutoSize = true;
+            this.lblPlayerName.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerName.Location = new System.Drawing.Point(1633, 890);
+            this.lblPlayerName.Name = "lblPlayerName";
+            this.lblPlayerName.Size = new System.Drawing.Size(302, 123);
+            this.lblPlayerName.TabIndex = 6;
+            this.lblPlayerName.Text = "NUL";
             // 
             // TmrDog
             // 
+            this.TmrDog.Enabled = true;
             this.TmrDog.Interval = 50;
             this.TmrDog.Tick += new System.EventHandler(this.TmrDog_Tick_1);
             // 
             // TmrTime
             // 
+            this.TmrTime.Enabled = true;
             this.TmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
+            // 
+            // lblPlayerLives
+            // 
+            this.lblPlayerLives.AutoSize = true;
+            this.lblPlayerLives.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerLives.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerLives.Location = new System.Drawing.Point(302, 890);
+            this.lblPlayerLives.Name = "lblPlayerLives";
+            this.lblPlayerLives.Size = new System.Drawing.Size(0, 123);
+            this.lblPlayerLives.TabIndex = 7;
             // 
             // GameWindow
             // 
@@ -156,11 +142,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1918, 1022);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblPlayerLives);
+            this.Controls.Add(this.lblPlayerName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblElapsed);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.txtLives);
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.PnlGame);
             this.DoubleBuffered = true;
@@ -169,8 +155,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GameWindow_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
-            this.PnlGame.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,12 +171,11 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblElapsed;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label txtName;
+        private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Timer TmrDog;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer TmrTime;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.TextBox txtLives;
+        private System.Windows.Forms.Label lblPlayerLives;
     }
 }
 

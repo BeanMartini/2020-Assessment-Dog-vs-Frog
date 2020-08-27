@@ -16,7 +16,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameWindow());
+            Application.Run(new Start());
         }
     }
 }

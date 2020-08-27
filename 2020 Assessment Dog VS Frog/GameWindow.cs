@@ -106,23 +106,32 @@ namespace _2020_Assessment_Dog_VS_Frog
         }
         // Start or stop the stopwatch.
         private DateTime StartTime;
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            TmrTime.Enabled = !TmrTime.Enabled;
-            TmrDog.Enabled = !TmrDog.Enabled;
-            TmrFrog.Enabled = !TmrFrog.Enabled;
-            StartTime = DateTime.Now;
-            btnStart.Enabled = false;
-        }
 
         private void GameWindow_Load(object sender, EventArgs e)
         {
-            lives = int.Parse(txtLives.Text);// pass lives entered from textbox to lives variable
+            lives = int.Parse(lblPlayerLives.Text);// pass lives in label to lives variable
         }
 
-        public GameWindow()
+        private void GameWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 27)//if press escape then pause game
+            {
+                TmrTime.Enabled = false;
+                TmrDog.Enabled = false;
+                TmrFrog.Enabled = false;
+            }
+        }
+
+        public GameWindow(string PlayerName, string PlayerLives)
         {
             InitializeComponent();
+
+            // get name and score from start form and show in lblPlayerName and lblPlayerLives
+            lblPlayerName.Text = PlayerName;
+            lblPlayerLives.Text = PlayerLives;
+
+            //Start timer
+            StartTime = DateTime.Now;
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
 
@@ -286,7 +295,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[0] back to left of panel
                 frog[0].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -295,7 +304,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[1] back to left of panel
                 frog[1].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -304,7 +313,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[2] back to left of panel
                 frog[2].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -313,7 +322,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[3] back to left of panel
                 frog[3].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -322,7 +331,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[4] back to left of panel
                 frog[4].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -331,7 +340,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[4] back to left of panel
                 frog[4].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -340,7 +349,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[5] back to left of panel
                 frog[5].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
@@ -349,7 +358,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 //reset frog[6] back to left of panel
                 frog[6].x = -200; // set x value of frogRec
                 lives -= 1;// lose a life
-                txtLives.Text = lives.ToString();// display number of lives
+                lblPlayerLives.Text = lives.ToString();// display number of lives
                 CheckLives();
             }
 
