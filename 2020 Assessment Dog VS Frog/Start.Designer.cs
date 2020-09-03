@@ -95,7 +95,7 @@
             this.txtEnterName.MaxLength = 3;
             this.txtEnterName.Name = "txtEnterName";
             this.txtEnterName.Size = new System.Drawing.Size(91, 49);
-            this.txtEnterName.TabIndex = 4;
+            this.txtEnterName.TabIndex = 1;
             this.txtEnterName.TextChanged += new System.EventHandler(this.txtEnterName_TextChanged);
             // 
             // txtEnterLives
@@ -105,12 +105,13 @@
             this.txtEnterLives.MaxLength = 1;
             this.txtEnterLives.Name = "txtEnterLives";
             this.txtEnterLives.Size = new System.Drawing.Size(31, 49);
-            this.txtEnterLives.TabIndex = 5;
+            this.txtEnterLives.TabIndex = 0;
             this.txtEnterLives.TextChanged += new System.EventHandler(this.txtEnterLives_TextChanged);
             this.txtEnterLives.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEnterLives_KeyPress);
             // 
             // btnStart
             // 
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.Enabled = false;
             this.btnStart.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(230, 344);
@@ -123,6 +124,7 @@
             // 
             // btnQuit
             // 
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuit.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuit.Location = new System.Drawing.Point(413, 344);
             this.btnQuit.Name = "btnQuit";

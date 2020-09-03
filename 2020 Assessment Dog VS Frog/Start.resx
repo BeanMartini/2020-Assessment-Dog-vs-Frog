@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblInstructions.Text" xml:space="preserve">
-    <value>Use the left, right, up and down arrow keys to move your character.
+    <value>Use the W, A, S and D keys to move your character.
 Try not to get hit by any frogs! If your character gets hit by a frog, a life is lost!
 You must survive as long as possible, try to reach the high score!
 Enter your Name (max 3 characters) and enter a number of lives (1-9).

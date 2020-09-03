@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnResume = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
             this.TmrFrog = new System.Windows.Forms.Timer(this.components);
             this.lblLives = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
@@ -37,21 +41,81 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.TmrDog = new System.Windows.Forms.Timer(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TmrTime = new System.Windows.Forms.Timer(this.components);
             this.lblPlayerLives = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.PnlGame.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlGame
             // 
             this.PnlGame.AutoSize = true;
             this.PnlGame.BackColor = System.Drawing.Color.White;
+            this.PnlGame.Controls.Add(this.btnQuit);
+            this.PnlGame.Controls.Add(this.btnMainMenu);
+            this.PnlGame.Controls.Add(this.btnResume);
+            this.PnlGame.Controls.Add(this.btnPause);
             this.PnlGame.Location = new System.Drawing.Point(12, 12);
             this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(1897, 864);
+            this.PnlGame.Size = new System.Drawing.Size(1909, 864);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(1033, 435);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 0;
+            this.btnQuit.TabStop = false;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Visible = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.Location = new System.Drawing.Point(1033, 285);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(75, 23);
+            this.btnMainMenu.TabIndex = 0;
+            this.btnMainMenu.TabStop = false;
+            this.btnMainMenu.Text = "Main Menu";
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Visible = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
+            // btnResume
+            // 
+            this.btnResume.Location = new System.Drawing.Point(1033, 133);
+            this.btnResume.Name = "btnResume";
+            this.btnResume.Size = new System.Drawing.Size(75, 23);
+            this.btnResume.TabIndex = 0;
+            this.btnResume.TabStop = false;
+            this.btnResume.Text = "Resume";
+            this.btnResume.UseVisualStyleBackColor = true;
+            this.btnResume.Visible = false;
+            this.btnResume.Click += new System.EventHandler(this.btnResume_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPause.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.pixil_frame_0;
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPause.CausesValidation = false;
+            this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPause.Location = new System.Drawing.Point(1814, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPause.Size = new System.Drawing.Size(92, 123);
+            this.btnPause.TabIndex = 0;
+            this.btnPause.TabStop = false;
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // TmrFrog
             // 
@@ -155,9 +219,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GameWindow_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameWindow_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.PnlGame.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,9 +236,12 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Timer TmrDog;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Timer TmrTime;
         private System.Windows.Forms.Label lblPlayerLives;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnMainMenu;
+        private System.Windows.Forms.Button btnResume;
     }
 }
 

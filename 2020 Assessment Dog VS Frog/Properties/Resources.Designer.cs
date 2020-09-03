@@ -89,5 +89,15 @@ namespace _2020_Assessment_Dog_VS_Frog.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pixil_frame_0 {
+            get {
+                object obj = ResourceManager.GetObject("pixil_frame_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

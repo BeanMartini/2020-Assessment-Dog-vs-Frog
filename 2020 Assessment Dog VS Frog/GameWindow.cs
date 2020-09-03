@@ -27,7 +27,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         int rndmspeed5;
         int rndmspeed6;
         int rndmpos;
-        bool left, right, up, down;
+        bool w, a, s, d;
         string move;
         int lives;
 
@@ -39,45 +39,47 @@ namespace _2020_Assessment_Dog_VS_Frog
                 TmrFrog.Enabled = false;
                 TmrTime.Enabled = false;
                 MessageBox.Show("Game Over");
-
+                HighScore HighScore2 = new HighScore();
+                Hide();
+                HighScore2.ShowDialog();
             }
 
         }
             private void GameWindow_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = true; }
-            if (e.KeyData == Keys.Right) { right = true; }
-            if (e.KeyData == Keys.Up) { up = true; }
-            if (e.KeyData == Keys.Down) { down = true; }
+            if (e.KeyData == Keys.A) { a = true; }
+            if (e.KeyData == Keys.D) { d = true; }
+            if (e.KeyData == Keys.W) { w = true; }
+            if (e.KeyData == Keys.S) { s = true; }
         }
 
         private void GameWindow_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = false; }
-            if (e.KeyData == Keys.Right) { right = false; }
-            if (e.KeyData == Keys.Up) { up = false; }
-            if (e.KeyData == Keys.Down) { down = false; }
+            if (e.KeyData == Keys.A) { a = false; }
+            if (e.KeyData == Keys.D) { d = false; }
+            if (e.KeyData == Keys.W) { w = false; }
+            if (e.KeyData == Keys.S) { s = false; }
         }
 
 
         private void TmrDog_Tick_1(object sender, EventArgs e)
         {
-            if (right) // if right arrow key pressed
+            if (d) // if right arrow key pressed
             {
                 move = "right";
                 frame1.MoveDog(move);
             }
-            if (left) // if left arrow key pressed
+            if (a) // if left arrow key pressed
             {
                 move = "left";
                 frame1.MoveDog(move);
             }
-            if (up) // if up arrow key pressed
+            if (w) // if up arrow key pressed
             {
                 move = "up";
                 frame1.MoveDog(move);
             }
-            if (down) // if down arrow key pressed
+            if (s) // if down arrow key pressed
             {
                 move = "down";
                 frame1.MoveDog(move);
@@ -112,14 +114,48 @@ namespace _2020_Assessment_Dog_VS_Frog
             lives = int.Parse(lblPlayerLives.Text);// pass lives in label to lives variable
         }
 
-        private void GameWindow_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnPause_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == 27)//if press escape then pause game
-            {
-                TmrTime.Enabled = false;
-                TmrDog.Enabled = false;
-                TmrFrog.Enabled = false;
-            }
+            TmrTime.Enabled = false;
+            TmrDog.Enabled = false;
+            TmrFrog.Enabled = false;
+
+            btnResume.Visible = true;
+            btnMainMenu.Visible = true;
+            btnQuit.Visible = true;
+        }
+
+        private void btnResume_Click(object sender, EventArgs e)
+        {
+            TmrTime.Enabled = true;
+            TmrDog.Enabled = true;
+            TmrFrog.Enabled = true;
+
+            btnResume.Visible = false;
+            btnMainMenu.Visible = false;
+            btnQuit.Visible = false;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //stops arrow keys from selecting buttons
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (!msg.HWnd.Equals(this.Handle) &&
+                (keyData == Keys.Left || keyData == Keys.Right ||
+                keyData == Keys.Up || keyData == Keys.Down))
+                return true;
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            Start Start2 = new Start();
+            Hide();
+            Start2.ShowDialog();
         }
 
         public GameWindow(string PlayerName, string PlayerLives)
