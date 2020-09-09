@@ -1,32 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace _2020_Assessment_Dog_VS_Frog
 {
-    public partial class HighScore : Form
+    class HighScore
     {
-        public HighScore()
+        //we create a Constructor with 2 overloads, 1 for the player's name and one for their score
+        public HighScore(string name, string time)
         {
-            InitializeComponent();
+            Name = name;
+            Time = time;
         }
+        //set properties so we can access the name and score
+        public string Name { get; set; }
 
-        private void btnQuit2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        public string Time { get; set; }
 
-        private void btnMainMenu2_Click(object sender, EventArgs e)
-        {
-            Start Start2 = new Start();
-            Hide();
-            Start2.ShowDialog();
-        }
     }
 }

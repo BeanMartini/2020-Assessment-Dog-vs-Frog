@@ -153,9 +153,9 @@
             this.lblElapsed.ForeColor = System.Drawing.Color.White;
             this.lblElapsed.Location = new System.Drawing.Point(780, 890);
             this.lblElapsed.Name = "lblElapsed";
-            this.lblElapsed.Size = new System.Drawing.Size(484, 123);
+            this.lblElapsed.Size = new System.Drawing.Size(480, 123);
             this.lblElapsed.TabIndex = 4;
-            this.lblElapsed.Text = "00:00:0";
+            this.lblElapsed.Text = "00:00.0";
             // 
             // lblName
             // 

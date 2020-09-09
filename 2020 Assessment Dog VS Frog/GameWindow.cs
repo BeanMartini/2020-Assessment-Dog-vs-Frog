@@ -39,7 +39,7 @@ namespace _2020_Assessment_Dog_VS_Frog
                 TmrFrog.Enabled = false;
                 TmrTime.Enabled = false;
                 MessageBox.Show("Game Over");
-                HighScore HighScore2 = new HighScore();
+                FrmHighScore HighScore2 = new FrmHighScore(lblPlayerName.Text, lblElapsed.Text);
                 Hide();
                 HighScore2.ShowDialog();
             }
