@@ -29,7 +29,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         int rndmpos;
         bool w, a, s, d;
         string move;
-        int lives;
+        int lives, time;
 
         
         private void CheckLives()
@@ -89,17 +89,14 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         private void tmrTime_Tick(object sender, EventArgs e)
         {
-            TimeSpan elapsed = DateTime.Now - StartTime;
-
-            // Compose the rest of the elapsed time.
-            lblElapsed.Text = elapsed.Seconds.ToString("000");
+            time += 1;
+            lblElapsed.Text = time.ToString("000");
         }
-        // Start or stop the stopwatch.
-        private DateTime StartTime;
 
         private void GameWindow_Load(object sender, EventArgs e)
         {
             lives = int.Parse(lblPlayerLives.Text);// pass lives in label to lives variable
+            time = int.Parse(lblElapsed.Text);// pass lives in label to lives variable
         }
 
         private void btnPause_Click(object sender, EventArgs e)
@@ -159,9 +156,6 @@ namespace _2020_Assessment_Dog_VS_Frog
             lblPlayerName.Text = PlayerName;
             lblPlayerLives.Text = PlayerLives;
 
-            //Start timer
-            StartTime = DateTime.Now;
-
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, PnlGame, new object[] { true });
 
             for (int i = 0; i < 7; i++)
@@ -198,6 +192,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed = xspeed.Next(20, 31);
+                    }
                 }
 
                     frog[0].x += rndmspeed;
@@ -216,6 +227,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed1 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed1 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed1 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed1 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed1 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[1].x += rndmspeed1;
@@ -234,6 +262,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed2 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed2 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed2 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed2 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed2 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[2].x += rndmspeed2;
@@ -252,6 +297,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed3 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed3 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed3 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed3 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed3 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[3].x += rndmspeed3;
@@ -270,6 +332,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed4 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed4 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed4 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed4 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed4 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[4].x += rndmspeed4;
@@ -288,6 +367,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed5 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed5 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed5 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed5 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed5 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[5].x += rndmspeed5;
@@ -306,6 +402,23 @@ namespace _2020_Assessment_Dog_VS_Frog
                 {
                     // generate a random number from 5 to 20 and put it in rndmspeed
                     rndmspeed6 = xspeed.Next(1, 12);
+
+                    if (time > 20)
+                    {
+                        rndmspeed6 = xspeed.Next(5, 16);
+                    }
+                    if (time > 30)
+                    {
+                        rndmspeed6 = xspeed.Next(10, 21);
+                    }
+                    if (time > 50)
+                    {
+                        rndmspeed6 = xspeed.Next(15, 26);
+                    }
+                    if (time > 60)
+                    {
+                        rndmspeed6 = xspeed.Next(20, 31);
+                    }
                 }
 
                 frog[6].x += rndmspeed6;
