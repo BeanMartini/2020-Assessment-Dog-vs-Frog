@@ -31,6 +31,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         string move;
         int lives;
 
+        
         private void CheckLives()
         {
             if (lives == 0)
@@ -90,21 +91,8 @@ namespace _2020_Assessment_Dog_VS_Frog
         {
             TimeSpan elapsed = DateTime.Now - StartTime;
 
-            // Start with the days if greater than 0.
-            string text = "";
-            if (elapsed.Days > 0)
-                text += elapsed.Days.ToString() + ".";
-
-            // Convert milliseconds into tenths of seconds.
-            int tenths = elapsed.Milliseconds / 100;
-
             // Compose the rest of the elapsed time.
-            text +=
-                elapsed.Minutes.ToString("00") + ":" +
-                elapsed.Seconds.ToString("00") + "." +
-                tenths.ToString("0");
-
-            lblElapsed.Text = text;
+            lblElapsed.Text = elapsed.Seconds.ToString("000");
         }
         // Start or stop the stopwatch.
         private DateTime StartTime;
@@ -156,6 +144,11 @@ namespace _2020_Assessment_Dog_VS_Frog
             Start Start2 = new Start();
             Hide();
             Start2.ShowDialog();
+        }
+
+        private void lblElapsed_Click(object sender, EventArgs e)
+        {
+
         }
 
         public GameWindow(string PlayerName, string PlayerLives)

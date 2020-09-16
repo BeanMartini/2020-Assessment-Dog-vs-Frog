@@ -9,7 +9,7 @@ namespace _2020_Assessment_Dog_VS_Frog
     class HighScore
     {
         //we create a Constructor with 2 overloads, 1 for the player's name and one for their score
-        public HighScore(string name, string time)
+        public HighScore(string name, int time)
         {
             Name = name;
             Time = time;
@@ -17,7 +17,7 @@ namespace _2020_Assessment_Dog_VS_Frog
         //set properties so we can access the name and score
         public string Name { get; set; }
 
-        public string Time { get; set; }
+        public int Time { get; set; }
 
     }
 }

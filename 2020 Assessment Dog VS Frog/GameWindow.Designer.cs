@@ -153,9 +153,10 @@
             this.lblElapsed.ForeColor = System.Drawing.Color.White;
             this.lblElapsed.Location = new System.Drawing.Point(780, 890);
             this.lblElapsed.Name = "lblElapsed";
-            this.lblElapsed.Size = new System.Drawing.Size(480, 123);
+            this.lblElapsed.Size = new System.Drawing.Size(274, 123);
             this.lblElapsed.TabIndex = 4;
-            this.lblElapsed.Text = "00:00.0";
+            this.lblElapsed.Text = "000";
+            this.lblElapsed.Click += new System.EventHandler(this.lblElapsed_Click);
             // 
             // lblName
             // 
@@ -188,6 +189,7 @@
             // TmrTime
             // 
             this.TmrTime.Enabled = true;
+            this.TmrTime.Interval = 1000;
             this.TmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
             // 
             // lblPlayerLives

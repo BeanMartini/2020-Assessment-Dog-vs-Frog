@@ -34,7 +34,8 @@ namespace _2020_Assessment_Dog_VS_Frog
                 // Split into the name and the score.
                 var values = line.Split(',');
 
-                highScore.Add(new HighScore(values[0], values[1]));
+                // highScore.Add(new HighScore(values[0], values[1]));
+                highScore.Add(new HighScore(values[0],Int32.Parse(values[1])));
             }
             reader.Close();
         }
@@ -51,6 +52,7 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         private void btnQuit2_Click(object sender, EventArgs e)
         {
+            SaveHighScore();
             Application.Exit();
         }
 
@@ -64,18 +66,19 @@ namespace _2020_Assessment_Dog_VS_Frog
 
         private void FrmHighScore_Load(object sender, EventArgs e)
         {
-            string lowest_time = highScore[highScore.Count - 1].Time;
+            int lowest_time = highScore[highScore.Count - 1].Time;
 
-            if (string (lblPlayerTime.Text) > lowest_time)
+            if (int.Parse(lblPlayerTime.Text) > lowest_time)
             {
                 lblMessage.Text = "You have made the Top Ten! Well Done!";
-                highScore.Add(new HighScore(lblPlayerName.Text, lblPlayerTime.Text));
+                highScore.Add(new HighScore(lblPlayerName.Text, int.Parse(lblPlayerTime.Text)));
             }
             else
             {
                 lblMessage.Text = "Keep trying to make the top ten!";
             }
 
+            SortHighScore();
             DisplayHighScore();
         }
 
