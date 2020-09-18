@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace _2020_Assessment_Dog_VS_Frog
 {
@@ -12,9 +13,12 @@ namespace _2020_Assessment_Dog_VS_Frog
         // declare fields to use in the class
 
         public int x, y, width, height;//variables for the rectangle
-        public Image dog;//variable for the dog's image
+
+        Image[] images = new Image[8];//set space for an array called images of 8 images
 
         public Rectangle dogRec;//variable for a rectangle to place our image in
+
+        Animation animate;//create an object called animate
 
         //Create a constructor (initialises the values of the fields)
         public Dog()
@@ -23,15 +27,21 @@ namespace _2020_Assessment_Dog_VS_Frog
             y = 360;
             width = 140;
             height = 100;
-            dog = Properties.Resources.frame1;
+            for (int i = 1; i <= 7; i++)
+            {
+                images[i] = Image.FromFile(Application.StartupPath + @"\frame" + i.ToString() + ".gif");
+            }
+            //pass the images array to the Animation class's constructor
+            animate = new Animation(images);
+
             dogRec = new Rectangle(x, y, width, height);
         }
 
         //methods
         public void DrawDog(Graphics g)
         {
-
-            g.DrawImage(dog, dogRec);
+            //instead of just drawing the person we use the GetNextImage() method to animate the person
+            g.DrawImage(animate.GetNextImage(), dogRec);
         }
         public void MoveDog(string move)
         {

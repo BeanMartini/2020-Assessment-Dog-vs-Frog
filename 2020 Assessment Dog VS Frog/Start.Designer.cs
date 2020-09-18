@@ -35,8 +35,8 @@
             this.lblInstructions = new System.Windows.Forms.Label();
             this.txtEnterName = new System.Windows.Forms.TextBox();
             this.txtEnterLives = new System.Windows.Forms.TextBox();
-            this.btnStart = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -109,36 +109,39 @@
             this.txtEnterLives.TextChanged += new System.EventHandler(this.txtEnterLives_TextChanged);
             this.txtEnterLives.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEnterLives_KeyPress);
             // 
+            // btnQuit
+            // 
+            this.btnQuit.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Quit;
+            this.btnQuit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuit.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.Location = new System.Drawing.Point(395, 334);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(100, 50);
+            this.btnQuit.TabIndex = 7;
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // btnStart
             // 
+            this.btnStart.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Start;
+            this.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.Enabled = false;
             this.btnStart.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(230, 344);
+            this.btnStart.Location = new System.Drawing.Point(221, 334);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 31);
+            this.btnStart.Size = new System.Drawing.Size(120, 50);
             this.btnStart.TabIndex = 6;
-            this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuit.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuit.Location = new System.Drawing.Point(413, 344);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(75, 31);
-            this.btnQuit.TabIndex = 7;
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(219)))), ((int)(((byte)(126)))));
+            this.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(722, 387);
             this.Controls.Add(this.btnQuit);

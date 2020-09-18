@@ -44,6 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(21, 18);
@@ -55,6 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(150, 18);
@@ -66,6 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(265, 52);
@@ -77,6 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(265, 145);
@@ -88,6 +92,7 @@
             // lblPlayerName
             // 
             this.lblPlayerName.AutoSize = true;
+            this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerName.ForeColor = System.Drawing.Color.White;
             this.lblPlayerName.Location = new System.Drawing.Point(466, 52);
@@ -99,6 +104,7 @@
             // lblPlayerTime
             // 
             this.lblPlayerTime.AutoSize = true;
+            this.lblPlayerTime.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerTime.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayerTime.ForeColor = System.Drawing.Color.White;
             this.lblPlayerTime.Location = new System.Drawing.Point(457, 145);
@@ -110,6 +116,7 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.White;
             this.lblMessage.Location = new System.Drawing.Point(67, 324);
@@ -121,21 +128,23 @@
             // 
             // btnMainMenu2
             // 
-            this.btnMainMenu2.Location = new System.Drawing.Point(152, 373);
+            this.btnMainMenu2.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Main_Menu;
+            this.btnMainMenu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMainMenu2.Location = new System.Drawing.Point(105, 373);
             this.btnMainMenu2.Name = "btnMainMenu2";
-            this.btnMainMenu2.Size = new System.Drawing.Size(75, 23);
+            this.btnMainMenu2.Size = new System.Drawing.Size(190, 50);
             this.btnMainMenu2.TabIndex = 7;
-            this.btnMainMenu2.Text = "MainMenu";
             this.btnMainMenu2.UseVisualStyleBackColor = true;
             this.btnMainMenu2.Click += new System.EventHandler(this.btnMainMenu2_Click);
             // 
             // btnQuit2
             // 
-            this.btnQuit2.Location = new System.Drawing.Point(385, 373);
+            this.btnQuit2.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Quit;
+            this.btnQuit2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuit2.Location = new System.Drawing.Point(381, 373);
             this.btnQuit2.Name = "btnQuit2";
-            this.btnQuit2.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit2.Size = new System.Drawing.Size(100, 50);
             this.btnQuit2.TabIndex = 8;
-            this.btnQuit2.Text = "Quit";
             this.btnQuit2.UseVisualStyleBackColor = true;
             this.btnQuit2.Click += new System.EventHandler(this.btnQuit2_Click);
             // 
@@ -164,6 +173,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(612, 450);
             this.Controls.Add(this.lstBoxTime);
             this.Controls.Add(this.lstBoxName);

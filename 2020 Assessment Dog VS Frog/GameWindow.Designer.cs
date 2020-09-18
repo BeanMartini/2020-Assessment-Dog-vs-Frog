@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PnlGame = new System.Windows.Forms.Panel();
-            this.btnQuit = new System.Windows.Forms.Button();
-            this.btnMainMenu = new System.Windows.Forms.Button();
-            this.btnResume = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
             this.TmrFrog = new System.Windows.Forms.Timer(this.components);
             this.lblLives = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
@@ -43,84 +38,17 @@
             this.TmrDog = new System.Windows.Forms.Timer(this.components);
             this.TmrTime = new System.Windows.Forms.Timer(this.components);
             this.lblPlayerLives = new System.Windows.Forms.Label();
+            this.PnlGame = new System.Windows.Forms.Panel();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnMainMenu = new System.Windows.Forms.Button();
+            this.btnResume = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
             this.PnlGame.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PnlGame
-            // 
-            this.PnlGame.AutoSize = true;
-            this.PnlGame.BackColor = System.Drawing.Color.White;
-            this.PnlGame.Controls.Add(this.btnQuit);
-            this.PnlGame.Controls.Add(this.btnMainMenu);
-            this.PnlGame.Controls.Add(this.btnResume);
-            this.PnlGame.Controls.Add(this.btnPause);
-            this.PnlGame.Location = new System.Drawing.Point(12, 12);
-            this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(1909, 864);
-            this.PnlGame.TabIndex = 0;
-            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.Location = new System.Drawing.Point(1033, 435);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(75, 23);
-            this.btnQuit.TabIndex = 0;
-            this.btnQuit.TabStop = false;
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Visible = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
-            // btnMainMenu
-            // 
-            this.btnMainMenu.Location = new System.Drawing.Point(1033, 285);
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnMainMenu.TabIndex = 0;
-            this.btnMainMenu.TabStop = false;
-            this.btnMainMenu.Text = "Main Menu";
-            this.btnMainMenu.UseVisualStyleBackColor = true;
-            this.btnMainMenu.Visible = false;
-            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
-            // 
-            // btnResume
-            // 
-            this.btnResume.Location = new System.Drawing.Point(1033, 133);
-            this.btnResume.Name = "btnResume";
-            this.btnResume.Size = new System.Drawing.Size(75, 23);
-            this.btnResume.TabIndex = 0;
-            this.btnResume.TabStop = false;
-            this.btnResume.Text = "Resume";
-            this.btnResume.UseVisualStyleBackColor = true;
-            this.btnResume.Visible = false;
-            this.btnResume.Click += new System.EventHandler(this.btnResume_Click);
-            // 
-            // btnPause
-            // 
-            this.btnPause.BackColor = System.Drawing.Color.Transparent;
-            this.btnPause.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.pixil_frame_0;
-            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPause.CausesValidation = false;
-            this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPause.FlatAppearance.BorderSize = 0;
-            this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPause.Location = new System.Drawing.Point(1814, 3);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPause.Size = new System.Drawing.Size(92, 123);
-            this.btnPause.TabIndex = 0;
-            this.btnPause.TabStop = false;
-            this.btnPause.UseVisualStyleBackColor = false;
-            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // TmrFrog
             // 
             this.TmrFrog.Enabled = true;
-            this.TmrFrog.Interval = 120;
             this.TmrFrog.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblLives
@@ -139,7 +67,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(474, 890);
+            this.lblTime.Location = new System.Drawing.Point(544, 890);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(339, 123);
             this.lblTime.TabIndex = 3;
@@ -148,10 +76,10 @@
             // lblElapsed
             // 
             this.lblElapsed.AutoSize = true;
-            this.lblElapsed.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblElapsed.BackColor = System.Drawing.Color.Transparent;
             this.lblElapsed.Font = new System.Drawing.Font("Elephant", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblElapsed.ForeColor = System.Drawing.Color.White;
-            this.lblElapsed.Location = new System.Drawing.Point(780, 890);
+            this.lblElapsed.Location = new System.Drawing.Point(852, 890);
             this.lblElapsed.Name = "lblElapsed";
             this.lblElapsed.Size = new System.Drawing.Size(274, 123);
             this.lblElapsed.TabIndex = 4;
@@ -202,11 +130,87 @@
             this.lblPlayerLives.Size = new System.Drawing.Size(0, 123);
             this.lblPlayerLives.TabIndex = 7;
             // 
+            // PnlGame
+            // 
+            this.PnlGame.AutoSize = true;
+            this.PnlGame.BackColor = System.Drawing.Color.White;
+            this.PnlGame.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.background;
+            this.PnlGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlGame.Controls.Add(this.btnQuit);
+            this.PnlGame.Controls.Add(this.btnMainMenu);
+            this.PnlGame.Controls.Add(this.btnResume);
+            this.PnlGame.Controls.Add(this.btnPause);
+            this.PnlGame.Location = new System.Drawing.Point(12, 12);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(1909, 864);
+            this.PnlGame.TabIndex = 0;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Quit;
+            this.btnQuit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuit.Location = new System.Drawing.Point(849, 635);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(240, 100);
+            this.btnQuit.TabIndex = 0;
+            this.btnQuit.TabStop = false;
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Visible = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnMainMenu
+            // 
+            this.btnMainMenu.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.Main_Menu;
+            this.btnMainMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMainMenu.Location = new System.Drawing.Point(745, 360);
+            this.btnMainMenu.Name = "btnMainMenu";
+            this.btnMainMenu.Size = new System.Drawing.Size(440, 100);
+            this.btnMainMenu.TabIndex = 0;
+            this.btnMainMenu.TabStop = false;
+            this.btnMainMenu.UseVisualStyleBackColor = true;
+            this.btnMainMenu.Visible = false;
+            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            // 
+            // btnResume
+            // 
+            this.btnResume.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.resume;
+            this.btnResume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnResume.Location = new System.Drawing.Point(789, 95);
+            this.btnResume.Name = "btnResume";
+            this.btnResume.Size = new System.Drawing.Size(340, 100);
+            this.btnResume.TabIndex = 0;
+            this.btnResume.TabStop = false;
+            this.btnResume.UseVisualStyleBackColor = true;
+            this.btnResume.Visible = false;
+            this.btnResume.Click += new System.EventHandler(this.btnResume_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.Transparent;
+            this.btnPause.BackgroundImage = global::_2020_Assessment_Dog_VS_Frog.Properties.Resources.pixil_frame_0;
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPause.CausesValidation = false;
+            this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPause.Location = new System.Drawing.Point(1814, 3);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPause.Size = new System.Drawing.Size(92, 123);
+            this.btnPause.TabIndex = 0;
+            this.btnPause.TabStop = false;
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1918, 1022);
             this.Controls.Add(this.lblPlayerLives);
             this.Controls.Add(this.lblPlayerName);
@@ -216,6 +220,7 @@
             this.Controls.Add(this.lblLives);
             this.Controls.Add(this.PnlGame);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.KeyPreview = true;
             this.Name = "GameWindow";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.cs" />
     <Compile Include="Dog.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
@@ -113,10 +114,46 @@
     <None Include="Resources\frog1.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pixil-frame-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\back.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pixil-frame-0.png" />
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
